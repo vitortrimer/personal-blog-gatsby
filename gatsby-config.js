@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Trimer's blog`,
+    title: `Vitor Trimer`,
     description: `Desenvolvedor frontend no KaBuM!, escrevo sobre tudo que eu desenvolvo e acho interessante.`,
     position: `Desenvolvedor frontend`,
     author: `@vitortrimer`,
@@ -13,6 +13,19 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [],
       },
     },
     `gatsby-transformer-sharp`,
